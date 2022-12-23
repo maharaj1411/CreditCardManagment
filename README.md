@@ -19,9 +19,9 @@ sudo systemctl status docker
 **Install git**
 
 sudo yum install git
-
-sudo git clone https://github.com/neeli-kavitha/CreditCardBillPayment.git
-
+````
+sudo git clone https://github.com/maharaj1411/CreditCardManagment
+````
 ls
 
 cd CreditCardBillPayment
@@ -32,7 +32,7 @@ sudo docker build -t app .
 
 sudo docker image ls
 
-sudo wget https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_        64
+sudo wget https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64
 
 sudo chmod +x docker-compose-linux-x86_64
 
