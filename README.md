@@ -6,8 +6,15 @@
 **1) Deployement using docker and docker composefile**
 
 **Install Docker
+````
+sudo yum update -y
+sudo yum install docker -y
+sudo systemctl start docker
+sudo usermod -a -G docker ec2-user
+sudo systemctl enable docker
+sudo systemctl status docker
 
-sudo yum update -y;sudo yum install docker -y;sudo systemctl start docker;sudo usermod -a -G docker ec2-user;sudo systemctl enable docker;sudo systemctl status docker
+````
 
 **Install git**
 
