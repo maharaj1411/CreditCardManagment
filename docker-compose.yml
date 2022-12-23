@@ -1,8 +1,7 @@
 version: '3.9'
 services:
   api:
-    build: 
-      context: .
+    image: creditapp
     ports:
       - "8080:8086"
     depends_on:
@@ -10,15 +9,15 @@ services:
         condition: service_healthy
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
-      - SPRING_DATASOURCE_USERNAME=kavitha
-      - SPRING_DATASOURCE_PASSWORD=kavitha
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=rootpass
   db:
     image: postgres
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=kavitha
-      - POSTGRES_USER=kavitha
+      - POSTGRES_PASSWORD=rootpass
+      - POSTGRES_USER=root
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U kavitha"]
       interval: 10s
